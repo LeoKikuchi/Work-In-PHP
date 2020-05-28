@@ -1,0 +1,47 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "Principal rodape"
+    "principal rodape";
+}
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: darkred;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho > h1 {
+    margin: 0px;
+    font-weight: 300;
+    font-size: 2.rem;
+}
+
+.cabecalho > h2 {
+    margin: 0px;
+}
+
+.principal {
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color: crimson;
+    padding: 20px;
+}
+
+.rodape {
+    grid-area: rodape;
+    background-color: ghostwhite;
+}
